@@ -1,0 +1,42 @@
+@use "../../config/variables.scss" as global;
+
+.header-container {
+  // height: 108px;
+//   display: flex;
+  width: 100%;
+//   align-items: center;
+//   justify-content: space-between;
+  padding: 17px 0px;
+  background-color: transparent;
+  position: absolute !important;
+  //   position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-container2 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  width: 7rem;
+  object-fit: contain;
+}
+.header-btn1 {
+  font-size: 14px;
+  font-family: global.$SemiBold;
+  padding: 24px 44px;
+}
+.header-box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  //   margin-left: 35px;
+}
+.header-txt1 {
+  font-size: 14px;
+  font-family: global.$Medium;
+  color: white;
+}

@@ -1,0 +1,260 @@
+// styles.scss
+@use "../../config/variables.scss" as global;
+$container-padding: 42.5px;
+$container-padding2: 85px;
+
+.hero-container {
+  width: 100%;
+  //   height: 850px;
+  //   background-color: red; // Main background color
+}
+
+.hero-banner {
+  background-size: cover; // Cover the entire banner
+  background-position: center; // Center the background image
+  background-repeat: no-repeat;
+  min-height: 740px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0vh 0 120px 0;
+  position: relative;
+  @media screen and (max-width: 992px) {
+    min-height: 230px;
+    padding-bottom: 40px;
+    padding: 40px 20px;
+  }
+}
+
+.hero-banner-txt1 {
+  font-family: global.$Light;
+  font-size: 16px;
+  color: white;
+  line-height: 26px;
+}
+.hero-banner-txt2 {
+  font-family: global.$Medium;
+  font-size: global.$fontSizeMain;
+  color: white;
+}
+.hero-banner-box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+//video-section
+.video-section-container {
+  padding-top: $container-padding2;
+  padding-bottom: $container-padding;
+  min-height: 535px;
+  width: 100%;
+  border-radius: 30px;
+  //   background-color: red;
+}
+
+.video-section-img1 {
+  background-size: cover; // Cover the entire banner
+  background-position: center; // Center the background image
+  background-repeat: no-repeat;
+  min-height: 535px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 34px;
+  padding: 0vh 0 70px 100px;
+}
+.video-section-btn1 {
+  background-color: #ffffff;
+  padding: 15px;
+  display: inline-block !important;
+  border-radius: 100%;
+}
+.video-section-icon1 {
+  color: global.$btnColor;
+  height: 35px;
+  width: 35px;
+}
+.video-section-box1 {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+.video-section-box2 {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.video-section-txt1 {
+  font-size: 30px;
+  font-family: global.$Regular;
+  color: #ffffff;
+}
+.video-section-txt2 {
+  font-size: 20px;
+  font-family: global.$Regular;
+  color: #ffffff;
+}
+.video-section-txt3 {
+  font-size: 16px;
+  font-family: global.$Light;
+  color: #ffffff;
+}
+//about-section
+.about-section-container {
+  padding-top: $container-padding;
+  padding-bottom: $container-padding;
+}
+
+.about-section-txt2 {
+  font-family: global.$Medium;
+  font-size: 20px;
+  // line-height: 26px;
+}
+.about-section-box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.about-section-box2 {
+  border-left: 2px solid black;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-section-box3 {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-section-box4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+//section3-container
+.section3-container {
+  background-color: global.$grey;
+  padding-top: $container-padding2;
+  padding-bottom: $container-padding2;
+}
+.section3-box1 {
+  margin-top: $container-padding;
+}
+.sectiion3-card-box1 {
+  background-size: cover; // Cover the entire banner
+  background-position: center; // Center the background image
+  background-repeat: no-repeat;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0vh 0 40px 30px;
+  position: relative;
+  border-radius: 12px;
+}
+.sectiion3-card-box2 {
+  @extend .sectiion3-card-box1;
+  min-height: 250px;
+}
+.sectiion3-card-box3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sectiion3-card-txt1 {
+  font-family: global.$Light;
+  font-size: 14px;
+  color: white;
+}
+.sectiion3-card-txt2 {
+  font-family: global.$Medium;
+  font-size: 22px;
+  color: white;
+}
+//achievement-summary
+.achievement-summary-container {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.achievement-summary-txt1 {
+  font-size: global.$fontSizeMain;
+  font-family: global.$SemiBold;
+}
+.achievement-summary-txt2 {
+  font-size: 28px;
+  font-family: global.$Light;
+}
+.achievement-summary-box1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-left: 1.5px solid global.$borderColor;
+  &:first-child {
+    border-left: none;
+    // align-items: flex-start;
+    // justify-content: flex-start;
+  }
+}
+//section4-container
+.section4-container {
+  padding-top: $container-padding2;
+  padding-bottom: $container-padding2;
+  display: flex;
+  flex-direction: column;
+  gap: 56.81px;
+}
+.section4-card {
+  background-color: global.$background1;
+  padding: 28.69px;
+  padding-bottom: calc(28.69px + 17.36px);
+  border-radius: 11.84px;
+  display: flex;
+  flex-direction: column;
+  gap: 17.36px;
+}
+.section4-card-selected {
+  background-color: global.$btnColor;
+}
+.section4-card-txt1 {
+  font-family: global.$SemiBold;
+  font-size: 22px;
+}
+.section4-card-line {
+  border: 0.5px solid global.$borderColor;
+}
+.section4-card-line-selected {
+  border: 0.5px solid white;
+}
+//insight-container
+.insight-container {
+  padding-top: $container-padding;
+  padding-bottom: $container-padding;
+  // display: flex;
+  // flex-direction: column;
+  // gap: $container-padding;
+}
+.insight-box1 {
+  padding: 8px 13px;
+  border-radius: 100%;
+  background-color: global.$grey2;
+}
+.insight-icon1 {
+  rotate: -180deg;
+}
+.insight-card-box1 {
+  background-size: cover; // Cover the entire banner
+  background-position: center; // Center the background image
+  background-repeat: no-repeat;
+  min-height: 460.98px;
+  display: flex;
+  align-items: flex-end;
+  padding: 36.33px;
+  position: relative;
+  border-radius: 12px;
+}
+.insight-card-txt1{
+  font-family: global.$Medium;
+  font-size: 22px;
+  color: white;
+  line-height: 31.59px;
+}
