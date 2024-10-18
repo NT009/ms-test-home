@@ -366,29 +366,55 @@ $container-mob-padding2: 40px;
   flex-direction: column;
   gap: $container-padding;
 }
+
 .insight-box1 {
   padding: 8px 13px;
   border-radius: 100%;
   background-color: global.$grey2;
+  cursor: pointer;
 }
-.insight-box2 {
-  padding-right: 22px;
-}
-.insight-box3 {
-  padding-left: 11px;
-  padding-right: 11px;
-}
-.insight-box4 {
-  padding-left: 22px;
-}
+
 .insight-icon1 {
   rotate: -180deg;
 }
+.insight-btn1 {
+  padding: 20px 13px !important;
+  background-color: global.$grey2;
+  border: none !important;
+  &:hover {
+    background-color: global.$grey2 !important;
+  }
+}
+/* Scrolling wrapper */
+.insight-scrolling-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Content that scrolls horizontally */
+.insight-scroll-content {
+  display: flex;
+  gap: 40px;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Firefox - hide scrollbar */
+  -ms-overflow-style: none; /* IE 10+ - hide scrollbar */
+  animation: scroll 20s linear infinite; /* Animation to scroll content */
+}
+
+.insight-scroll-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera - hide scrollbar */
+}
+
+/* Individual card styling */
 .insight-card-box1 {
-  background-size: cover; // Cover the entire banner
-  background-position: center; // Center the background image
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   min-height: 460.98px;
+  min-width: 30%; /* Ensure fixed width for scrolling */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -396,23 +422,39 @@ $container-mob-padding2: 40px;
   gap: 11.84px;
   position: relative;
   border-radius: 12px;
+  @media screen and (max-width: 1024px) {
+    min-width: 35%; /* Ensure fixed width for scrolling */
+  }
+  @media screen and (max-width: 991px) {
+    min-width: 45%; /* Ensure fixed width for scrolling */
+  }
+  @media screen and (max-width: 767px) {
+    min-width: 60%; /* Ensure fixed width for scrolling */
+  }
+  @media screen and (max-width: 425px) {
+    min-width: 80%; /* Ensure fixed width for scrolling */
+  }
 }
+
 .insight-card-txt1 {
   font-family: global.$Medium;
   font-size: 22px;
   color: white;
   line-height: 31.59px;
 }
+
 .insight-card-txt2 {
   font-size: 12.62px;
   font-family: global.$Regular;
   color: white;
 }
+
 .insight-card-txt3 {
   font-size: 15.78px;
   font-family: global.$Regular;
   color: white;
 }
+
 //career
 .career-container {
   display: flex;

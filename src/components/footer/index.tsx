@@ -42,15 +42,15 @@ export default function Footer() {
               Lorem Ipsum,
               <br /> Iso lorem,Iso Lorem Posum
             </div>
-            <div>
+            <div className="d-flex flex-column gap-1">
               <div className="footer-txt6">+91 00000 00000</div>
               <div className="footer-txt6">info@demo.com</div>
             </div>
-            <div>
+            <div className="d-flex flex-column gap-3">
               <div className="footer-txt6">Follow us on</div>
               <div className="d-flex gap-2 justify-content-center justify-content-lg-start">
                 <Button
-                  icon={<FaFacebookF size={14} />}
+                  icon={<FaFacebookF />}
                   size="small"
                   className="footer-btn1"
                 />

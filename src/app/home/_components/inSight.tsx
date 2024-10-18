@@ -1,10 +1,26 @@
-import { Col, Row } from "react-bootstrap";
+"use client";
 import { IoMdPlay } from "react-icons/io";
+import { useRef } from "react";
 import image1 from "@/assets/images/insight1.png";
 import image2 from "@/assets/images/insight2.png";
 import image3 from "@/assets/images/insight3.png";
+import { Button } from "antd";
 
 export default function InSight() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -500, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 500, behavior: "smooth" });
+    }
+  };
+
   function ItemCard(props: { image: string }) {
     return (
       <div
@@ -24,37 +40,38 @@ export default function InSight() {
       </div>
     );
   }
+
   return (
     <div className="insight-container">
       <div className="d-flex justify-content-between align-items-center">
         <div className="home-heading1">Latest Insights</div>
         <div className="d-flex align-items-center gap-3">
-          <div className="insight-box1">
-            <IoMdPlay className="insight-icon1" />
-          </div>
-          <div className="insight-box1">
-            <IoMdPlay />
-          </div>
+          <Button
+            shape="round"
+            icon={<IoMdPlay className="insight-icon1" />}
+            className="insight-btn1"
+            onClick={scrollLeft}
+          />
+          <Button
+            icon={<IoMdPlay />}
+            className="insight-btn1"
+            shape="round"
+            onClick={scrollRight}
+          />
         </div>
       </div>
-      <div>
-        <Row>
-          <Col md={4}>
-            <div className="insight-box2">
-              <ItemCard image={image1.src} />
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className="insight-box3">
-              <ItemCard image={image2.src} />
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className="insight-box4">
-              <ItemCard image={image3.src} />
-            </div>
-          </Col>
-        </Row>
+      <div className="insight-scrolling-wrapper">
+        <div className="insight-scroll-content" ref={scrollContainerRef}>
+          <ItemCard image={image1.src} />
+          <ItemCard image={image2.src} />
+          <ItemCard image={image3.src} />
+          <ItemCard image={image1.src} />
+          <ItemCard image={image2.src} />
+          <ItemCard image={image3.src} />
+          <ItemCard image={image1.src} />
+          <ItemCard image={image2.src} />
+          <ItemCard image={image3.src} />
+        </div>
       </div>
     </div>
   );
