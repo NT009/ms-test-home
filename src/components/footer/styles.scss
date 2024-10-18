@@ -1,0 +1,131 @@
+@use "../../config/variables.scss" as global;
+
+.footer-container {
+  background-color: global.$btnColor;
+}
+.footer-txt1 {
+  font-size: 18.94px;
+  font-family: global.$Medium;
+  color: white;
+  @media screen and (max-width: 991px) {
+    font-size: 14.94px;
+  }
+}
+.footer-txt2 {
+  font-size: 14.2px;
+  font-family: global.$Medium;
+  color: white;
+  cursor: pointer;
+  @media screen and (max-width: 991px) {
+    font-size: 12.94px;
+  }
+}
+.footer-txt3 {
+  font-size: 15.78px;
+  font-family: global.$Medium;
+  color: #ffffff;
+  background-color: global.$background2;
+  padding: 14.99px 33.14px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+.footer-txt4 {
+  font-family: global.$Medium;
+  font-size: 20px;
+  color: #ffffff;
+  // line-height: 26px;
+}
+.footer-txt5 {
+  font-family: global.$Regular;
+  font-size: 12.62px;
+  color: white;
+  line-height: 25.25px;
+}
+.footer-txt6 {
+  font-family: global.$SemiBold;
+  font-size: 12.62px;
+  color: white;
+}
+.footer-box1 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-top: 47.34px;
+  padding-bottom: 47.34px;
+  @media screen and (max-width: 991px) {
+    gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.footer-box2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer-box3 {
+  border-bottom: 2px solid global.$background2;
+}
+.footer-box4 {
+  border-top: 2px solid global.$background2;
+  padding-top: 40.24px;
+  padding-bottom: 40.24px;
+  font-size: 12.62px;
+  font-family: global.$Medium;
+  color: white;
+  @media screen and (max-width: 991px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.footer-box6 {
+  display: flex;
+  flex-direction: column;
+  gap: 14.99px;
+  padding-top: 94.68px;
+  min-height: 490.88px;
+  padding-right: 53.65px;
+  padding-left: 53.65px;
+  border-right: 2px solid global.$background2;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    border-right: none;
+  }
+  @media screen and (max-width: 991px) {
+    padding: 20px;
+    min-height: 0px;
+    border-right: none;
+    &:first-child {
+      padding-left: 20px;
+      border-right: 2px solid global.$background2;
+    }
+    &:last-child {
+      border-top: 2px solid global.$background2;
+      text-align: center;
+    }
+  }
+   @media screen and (max-width: 767px) {
+    &:first-child {
+      border-right: none;
+      border-bottom: 2px solid global.$background2;
+    }
+  }
+}
+.footer-btn1 {
+  border-radius: 8px !important;
+  background-color: global.$color2 !important;
+  border-color: global.$color2 !important;
+  color: #ffffff !important;
+  padding: 10px !important;
+}

@@ -1,4 +1,4 @@
-@use "./config/variables.scss" as global;
+@use "../config/variables.scss" as global;
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -45,11 +45,19 @@ body {
 .home-heading1 {
   font-family: global.$Regular;
   font-size: global.$fontSizeMain;
+  @media screen and (max-width: 992px) {
+    font-size: global.$fontMainMobile;
+  }
 }
 .home-dscription1 {
   font-family: global.$Regular;
   font-size: 16px;
   line-height: 26px;
+  @media screen and (max-width: 992px) {
+    font-size: 14px;
+  line-height: 20px;
+
+  }
 }
 .home-dscription2 {
   font-family: global.$Regular;
@@ -58,7 +66,7 @@ body {
 }
 .home-txt1 {
   font-family: global.$SemiBold;
-  font-size: 28.40px;
+  font-size: 28.4px;
 }
 // body {
 //   color: var(--foreground);

@@ -6,9 +6,9 @@ export default function VideoSection() {
     <div className="video-section-container">
       <div
         style={{
-          backgroundImage: `url(${Bg.src})`, // Keep only the background image
-          backgroundSize: "cover", // Ensure the background image covers the entire div
-          backgroundPosition: "center", // Center the background image
+          backgroundImage: `url(${Bg.src})`,
+          backgroundSize: "cover", 
+          backgroundPosition: "center",
         }}
         className="video-section-img1"
       >
@@ -25,21 +25,6 @@ export default function VideoSection() {
             <div className="video-section-txt3">CEO & Founder of Demo</div>
           </div>
         </div>
-        {/* <div>
-          <Row>
-            <Col md={8} className="hero-banner-box1">
-              <div className="hero-banner-txt2">Lorem ipsum dolor sit amet</div>
-              <div className="hero-banner-txt1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                mattis velit nulla. In hac habitasse platea dictumst. Fusce non
-                venenatis velit. Proin luctus malesuada mauris vitae mattis.
-                Pellentesque iaculis elit lorem, et varius ipsum dictum. Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
-                velit nulla. In hac habitasse platea dictumst.
-              </div>
-            </Col>
-          </Row>
-        </div> */}
       </div>
     </div>
   );

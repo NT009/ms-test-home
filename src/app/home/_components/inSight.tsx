@@ -13,16 +13,14 @@ export default function InSight() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className={
-         "insight-card-box1" 
-        }
+        className={"insight-card-box1"}
       >
-        <div>21 March 2023</div>
+        <div className="insight-card-txt2">21 March 2023</div>
         <div className="insight-card-txt1">
           dictumst. Fusce non venenatis velit. Proin luctus malesuada mauris
           vitae mattis
         </div>
-        <div>Read More</div>
+        <div className="insight-card-txt3">Read More</div>
       </div>
     );
   }
@@ -39,17 +37,22 @@ export default function InSight() {
           </div>
         </div>
       </div>
-      <br />
       <div>
         <Row>
           <Col md={4}>
-            <ItemCard image={image1.src} />
+            <div className="insight-box2">
+              <ItemCard image={image1.src} />
+            </div>
           </Col>
           <Col md={4}>
-            <ItemCard image={image2.src} />
+            <div className="insight-box3">
+              <ItemCard image={image2.src} />
+            </div>
           </Col>
           <Col md={4}>
-            <ItemCard image={image3.src} />
+            <div className="insight-box4">
+              <ItemCard image={image3.src} />
+            </div>
           </Col>
         </Row>
       </div>

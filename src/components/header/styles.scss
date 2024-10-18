@@ -1,0 +1,59 @@
+@use "../../config/variables.scss" as global;
+
+.header-container {
+ 
+  width: 100%;
+
+  padding: 17px 0px;
+  background-color: transparent;
+  position: absolute !important;
+  top: 0;
+  z-index: 1000;
+}
+.header-container2 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  width: 7rem;
+  object-fit: contain;
+  @media screen and (max-width: 992px) {
+    width: 5rem;
+  }
+}
+.header-btn1 {
+  font-size: 14px;
+  font-family: global.$SemiBold;
+  padding: 24px 44px;
+  @media screen and (max-width: 992px) {
+    padding: 15px 15px;
+  }
+}
+.header-box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  @media screen and (max-width: 992px) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.header-txt1 {
+  font-size: 14px;
+  font-family: global.$Medium;
+  color: white;
+}
+.header-btn2 {
+  .ant-btn-icon {
+    color: white;
+    font-size: 2rem;
+  }
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}

@@ -61,7 +61,9 @@ export default function Section4() {
           <DescCard number="01" selected={false} />
         </Col>
         <Col md={4}>
+          <br className="d-md-none" />
           <DescCard number="02" selected={false} />
+          <br className="d-md-none" />
         </Col>
         <Col md={4}>
           <DescCard number="03" selected={true} />

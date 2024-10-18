@@ -1,8 +1,9 @@
 // styles.scss
-@use "../../config/variables.scss" as global;
+@use "../../../config/variables.scss" as global;
 $container-padding: 42.5px;
 $container-padding2: 85px;
-
+$container-mob-padding: 22.5px;
+$container-mob-padding2: 40px;
 .hero-container {
   width: 100%;
   //   height: 850px;
@@ -19,9 +20,14 @@ $container-padding2: 85px;
   padding: 0vh 0 120px 0;
   position: relative;
   @media screen and (max-width: 992px) {
-    min-height: 230px;
+    min-height: 350px;
     padding-bottom: 40px;
     padding: 40px 20px;
+  }
+  @media screen and (max-width: 767px) {
+    min-height: 300px;
+    padding: 0px;
+    padding-bottom: 20px;
   }
 }
 
@@ -30,16 +36,26 @@ $container-padding2: 85px;
   font-size: 16px;
   color: white;
   line-height: 26px;
+  @media screen and (max-width: 992px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 .hero-banner-txt2 {
   font-family: global.$Medium;
   font-size: global.$fontSizeMain;
   color: white;
+  @media screen and (max-width: 992px) {
+    font-size: global.$fontMainMobile;
+  }
 }
 .hero-banner-box1 {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  @media screen and (max-width: 992px) {
+    gap: 10px;
+  }
 }
 //video-section
 .video-section-container {
@@ -48,6 +64,14 @@ $container-padding2: 85px;
   min-height: 535px;
   width: 100%;
   border-radius: 30px;
+  @media screen and (max-width: 992px) {
+    min-height: 335px;
+    padding-top: $container-mob-padding2;
+    padding-bottom: $container-mob-padding;
+  }
+  @media screen and (max-width: 767px) {
+    min-height: 150px;
+  }
   //   background-color: red;
 }
 
@@ -60,22 +84,41 @@ $container-padding2: 85px;
   align-items: flex-end;
   border-radius: 34px;
   padding: 0vh 0 70px 100px;
+  @media screen and (max-width: 992px) {
+    min-height: 335px;
+    padding: 0vh 0 40px 40px;
+  }
+  @media screen and (max-width: 767px) {
+    min-height: 200px;
+    padding: 0vh 0 20px 20px;
+    border-radius: 20px;
+  }
 }
 .video-section-btn1 {
   background-color: #ffffff;
   padding: 15px;
   display: inline-block !important;
   border-radius: 100%;
+  @media screen and (max-width: 767px) {
+    padding: 10px;
+  }
 }
 .video-section-icon1 {
   color: global.$btnColor;
   height: 35px;
   width: 35px;
+  @media screen and (max-width: 767px) {
+    height: 20px;
+    width: 20px;
+  }
 }
 .video-section-box1 {
   display: flex;
   gap: 24px;
   flex-direction: column;
+  @media screen and (max-width: 992px) {
+    gap: 10px;
+  }
 }
 .video-section-box2 {
   display: flex;
@@ -86,21 +129,34 @@ $container-padding2: 85px;
   font-size: 30px;
   font-family: global.$Regular;
   color: #ffffff;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 .video-section-txt2 {
   font-size: 20px;
   font-family: global.$Regular;
   color: #ffffff;
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 .video-section-txt3 {
   font-size: 16px;
   font-family: global.$Light;
   color: #ffffff;
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 }
 //about-section
 .about-section-container {
   padding-top: $container-padding;
   padding-bottom: $container-padding;
+  @media screen and (max-width: 767px) {
+    padding-top: $container-mob-padding;
+    padding-bottom: $container-mob-padding;
+  }
 }
 
 .about-section-txt2 {
@@ -112,6 +168,9 @@ $container-padding2: 85px;
   display: flex;
   flex-direction: column;
   gap: 35px;
+  @media screen and (max-width: 767px) {
+    gap: 20px;
+  }
 }
 .about-section-box2 {
   border-left: 2px solid black;
@@ -119,12 +178,22 @@ $container-padding2: 85px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: 767px) {
+    border-left: none;
+    padding-left: 0px;
+    gap: 10px;
+  }
 }
 .about-section-box3 {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: 767px) {
+    padding-left: 0px;
+    gap: 10px;
+    padding-top: 20px;
+  }
 }
 .about-section-box4 {
   display: flex;
@@ -136,9 +205,16 @@ $container-padding2: 85px;
   background-color: global.$grey;
   padding-top: $container-padding2;
   padding-bottom: $container-padding2;
+  @media screen and (max-width: 991px) {
+    padding-top: $container-mob-padding2;
+    padding-bottom: $container-mob-padding2;
+  }
 }
 .section3-box1 {
   margin-top: $container-padding;
+  @media screen and (max-width: 991px) {
+    margin-top: $container-mob-padding;
+  }
 }
 .sectiion3-card-box1 {
   background-size: cover; // Cover the entire banner
@@ -150,10 +226,17 @@ $container-padding2: 85px;
   padding: 0vh 0 40px 30px;
   position: relative;
   border-radius: 12px;
+  @media screen and (max-width: 991px) {
+    min-height: 250px;
+    padding: 0vh 0 20px 15px;
+  }
 }
 .sectiion3-card-box2 {
   @extend .sectiion3-card-box1;
   min-height: 250px;
+  @media screen and (max-width: 991px) {
+    min-height: 200px;
+  }
 }
 .sectiion3-card-box3 {
   display: flex;
@@ -164,24 +247,40 @@ $container-padding2: 85px;
   font-family: global.$Light;
   font-size: 14px;
   color: white;
+  @media screen and (max-width: 991px) {
+    font-size: 12px;
+  }
 }
 .sectiion3-card-txt2 {
   font-family: global.$Medium;
   font-size: 22px;
   color: white;
+  @media screen and (max-width: 991px) {
+    font-size: 18px;
+  }
 }
 //achievement-summary
 .achievement-summary-container {
   padding-top: 65px;
   padding-bottom: 65px;
+  @media screen and (max-width: 992px) {
+    padding-top: $container-mob-padding2;
+    padding-bottom: $container-mob-padding2;
+  }
 }
 .achievement-summary-txt1 {
   font-size: global.$fontSizeMain;
   font-family: global.$SemiBold;
+  @media screen and (max-width: 992px) {
+    font-size: global.$fontMainMobile;
+  }
 }
 .achievement-summary-txt2 {
   font-size: 28px;
   font-family: global.$Light;
+  @media screen and (max-width: 992px) {
+    font-size: 22px;
+  }
 }
 .achievement-summary-box1 {
   display: flex;
@@ -194,6 +293,28 @@ $container-padding2: 85px;
     // align-items: flex-start;
     // justify-content: flex-start;
   }
+  @media screen and (min-width: 575px) and (max-width: 767px) {
+    &:nth-child(-n + 2) {
+      padding-bottom: 20px;
+    }
+    border: none;
+    &:nth-child(odd) {
+      border-right: 1.5px solid global.$borderColor;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    border-right: none;
+    border-bottom: 1.5px solid global.$borderColor;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    &:first-child {
+      padding-top: 0px;
+    }
+    &:last-child {
+      border: none;
+      padding-bottom: 0px;
+    }
+  }
 }
 //section4-container
 .section4-container {
@@ -202,6 +323,11 @@ $container-padding2: 85px;
   display: flex;
   flex-direction: column;
   gap: 56.81px;
+  @media screen and (max-width: 991px) {
+    padding-top: $container-mob-padding2;
+    padding-bottom: $container-mob-padding2;
+    gap: 30px;
+  }
 }
 .section4-card {
   background-color: global.$background1;
@@ -211,6 +337,10 @@ $container-padding2: 85px;
   display: flex;
   flex-direction: column;
   gap: 17.36px;
+  @media screen and (max-width: 991px) {
+    padding: 20px;
+    gap: 10px;
+  }
 }
 .section4-card-selected {
   background-color: global.$btnColor;
@@ -218,6 +348,9 @@ $container-padding2: 85px;
 .section4-card-txt1 {
   font-family: global.$SemiBold;
   font-size: 22px;
+  @media screen and (max-width: 991px) {
+    font-size: 18px;
+  }
 }
 .section4-card-line {
   border: 0.5px solid global.$borderColor;
@@ -229,14 +362,24 @@ $container-padding2: 85px;
 .insight-container {
   padding-top: $container-padding;
   padding-bottom: $container-padding;
-  // display: flex;
-  // flex-direction: column;
-  // gap: $container-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $container-padding;
 }
 .insight-box1 {
   padding: 8px 13px;
   border-radius: 100%;
   background-color: global.$grey2;
+}
+.insight-box2 {
+  padding-right: 22px;
+}
+.insight-box3 {
+  padding-left: 11px;
+  padding-right: 11px;
+}
+.insight-box4 {
+  padding-left: 22px;
 }
 .insight-icon1 {
   rotate: -180deg;
@@ -247,14 +390,201 @@ $container-padding2: 85px;
   background-repeat: no-repeat;
   min-height: 460.98px;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 36.33px;
+  gap: 11.84px;
   position: relative;
   border-radius: 12px;
 }
-.insight-card-txt1{
+.insight-card-txt1 {
   font-family: global.$Medium;
   font-size: 22px;
   color: white;
   line-height: 31.59px;
+}
+.insight-card-txt2 {
+  font-size: 12.62px;
+  font-family: global.$Regular;
+  color: white;
+}
+.insight-card-txt3 {
+  font-size: 15.78px;
+  font-family: global.$Regular;
+  color: white;
+}
+//career
+.career-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 355.05px;
+  @media screen and (max-width: 991px) {
+    min-height: 250.05px;
+  }
+}
+.career-txt1 {
+  font-family: global.$Medium;
+  font-size: 36.33px;
+  color: #ffffff;
+  @media screen and (max-width: 991px) {
+    font-size: 26px;
+  }
+}
+.career-txt2 {
+  font-family: global.$Regular;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 27.47px;
+  @media screen and (max-width: 991px) {
+    font-size: 12px;
+    line-height: 20.47px;
+  }
+}
+.career-box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 31.56px;
+}
+.career-btn1 {
+  padding: 28px 60.73px !important;
+  font-size: 19.73px;
+  font-family: global.$Medium;
+  margin-right: 70px;
+  @media screen and (max-width: 991px) {
+    padding: 20px 30.73px !important;
+    font-size: 16px;
+    margin-right: 70px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+//section5
+.section5-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 650px;
+  @media screen and (max-width: 991px) {
+    background-image: none !important;
+    background-image: url("../../../assets/images/section5-img.jpeg") !important;
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
+}
+.section5-box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  @media screen and (max-width: 991px) {
+    gap: 20px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.section5-box3 {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 11.05px;
+}
+.section5-img1-wrapper {
+  position: relative;
+  width: 403.97px;
+  height: 100%;
+  border-radius: 8px;
+  @media screen and (max-width: 991px) {
+    width: 300.97px;
+  }
+}
+
+.section5-img1 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.section5-img1-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 18.79%,
+    #ffffff 70.68%
+  );
+  z-index: 1;
+  pointer-events: none; /* Ensure the gradient doesn't block interactions */
+}
+.section5-box2 {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  padding: 0px 26px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 15.78px;
+  @media screen and (max-width: 991px) {
+    padding: 0px 18px 18px 18px;
+  }
+}
+.section5-txt1 {
+  font-family: global.$Medium;
+  font-size: 22.87px;
+  padding-top: 23.14px;
+  padding-left: 25.25px;
+  padding-bottom: 17.36px;
+  @media screen and (max-width: 991px) {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
+}
+.section5-txt2 {
+  font-family: global.$Medium;
+  font-size: 22.87px;
+  color: black;
+  @media screen and (max-width: 991px) {
+    font-size: 18px;
+  }
+}
+.section5-txt3 {
+  font-family: global.$Medium;
+  font-size: 12.62px;
+  color: black;
+  @media screen and (max-width: 991px) {
+    font-size: 10px;
+  }
+}
+.section5-btn1 {
+  position: absolute;
+  top: 35%;
+  left: 95%;
+  // bottom: 50%;
+  z-index: 1000;
+  padding: 33px !important;
+  border: none !important;
+  @media screen and (max-width: 991px) {
+    padding: 24px !important;
+  }
 }

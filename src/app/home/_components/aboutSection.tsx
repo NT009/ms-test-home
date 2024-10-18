@@ -37,7 +37,7 @@ export default function AboutSection() {
                 Pellentesque iaculis elit lorem.
               </div>
             </div>
-            <hr className=""/>
+            <hr className="d-none d-md-block"/>
             <div className="about-section-box2">
               <div className="about-section-txt2 ">Lorem ipsum</div>
               <div className="home-dscription2">

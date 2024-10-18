@@ -7,9 +7,9 @@ export default function Hero() {
     <div className="hero-container">
       <div
         style={{
-          backgroundImage: `url(${Bg.src})`, // Keep only the background image
-          backgroundSize: "cover", // Ensure the background image covers the entire div
-          backgroundPosition: "center", // Center the background image
+          backgroundImage: `url(${Bg.src})`,
+          backgroundSize: "cover", 
+          backgroundPosition: "center", 
         }}
         className="hero-banner"
       >
